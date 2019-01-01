@@ -79,21 +79,21 @@ for(int i = 0; i < n; i++)
 
 
 // on utilisant la biblioteque stl 
-// vector<vector<personne>> tab(n);
+vector<personne*>tab;
+tab.push_back(new peintre("mohamed"));
+tab.push_back(new plombier("rachid"));
+tab.push_back(new minuisier("hafid"));
+tab.push_back(new macon("said"));
+tab.push_back(new peintre("karim"));
+for(int i=0;i<n;i++){
+    tab[i]->print();
+}
 
 
-// tab[0].push_back( peintre("amine"));
-// tab[1].push_back( plombier("jamel"));
-// tab[2].push_back( minuisier("kamel"));
-// tab[3].push_back( macon("brahim"));
-// tab[4].push_back( peintre("9adour"));
-
-//ici il y a une bug 
-// for(int i = 0; i < n; i++)
-// {
-//     tab[i].print();
-// }
-
+for(int i=0;i<n;i++){
+    delete tab[i];
+    tab[i]=0;
+}
 
 
 }
